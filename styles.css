@@ -1,63 +1,113 @@
 body {
-  margin: 0; /* Removes default margin and padding applied by other browser */
-
+  margin: 0;
   padding: 0;
 }
 
 header {
-  display: flex; /*  Tells header it is a flex container */
-  justify-content: space-evenly; /*  Evenly spaces child elements inside the container */
-  align-items: center; /*  Vertically center child elements inside the container */
-  background-color: darksalmon;
-  color: white; /*   Font color */
-  padding: 20px; /*  Padding INSIDE the header to create space around the content */
-  width: 100%; /*  Makes sure the header spans the entire width of the screen */
-  margin: 0 auto; /*  Centers the header horizontally on the page */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /*  Adds a slight shadow below the header to give it depth */
-  flex-wrap: wrap; /*  Makes sure that the child elements wrap onto a new line if there isn't enough space */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: coral;
+  color: black;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
   height: 300px;
   font-size: 40px;
 }
 
 header img {
-  border-radius: 25%; /*  Rounds the corners of the elements (if it's square, adds rounded corners) */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /*Adds soft shadow to make it "float"*/
-  max-width: 100%; /*  Ensures the image is responsive */
-  height: auto; /*  Maintains image's aspect ratio while resizing */
-  object-fit: cover; /*  Crops theimage without distorting */
+  border-radius: 5%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
-  background-color: #919190:
+  background-color: #919190;
 }
+
 .intro {
-  max-width: 500px; /*  Limits the idth for better readability */
-  text-align: center; /*  Aligns text to the left, right, or center */
+  max-width: 500px;
+  text-align: center;
 }
 
-/* Styling for entire Main Element*/
 main {
-  display: flex; /*  Tells flex it is a main container */
-  flex-direction: column; /* Stacks child elements (sections) vertically in a column*/
-  align-items: center; /*  Aligns child elements horizontally in the center */
-  padding: 30px; /*  Adds padding AROUND the main content for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
-/* Styling for Section Elements */
+* {
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  width: 50vw;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  height: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  align-items: center;
+}
+
+.carousel-images img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+  flex: 0 0 100%;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 section {
-  background-color: #f9f9f9; /*  Background color of each section */
-  border-radius: 2px; /*   Rounded corners to section   */
-  box-shadow: 0px 4px 8px rgba (0, 0, 0, 0.3); /*  Box shadow making it "float" */
-  padding: 20px; /*  Adds space INSIDE each section or card */
-  margin-bottom: 20px; /*  Adds space at the BOTTOM of the card */
-  width: 100%; /*  Makes each section take up the full width of the MAIN container    */
-  max-width: 800px; /*  Limits the width to a max px of 800 */
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
 }
 
 li {
-  margin-bottom: 15px; /*  Add space between each list */
+  margin-bottom: 15px;
 }
 
 .h1Styling {
